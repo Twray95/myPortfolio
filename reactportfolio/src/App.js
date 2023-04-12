@@ -1,18 +1,22 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import Header from './components/Header';
-import Card from './components/Card';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import NavTabs from "./components/NavTabs";
+import Home from "./components/pages/Home";
+import Work from "./components/pages/Work";
+import Contact from "./components/pages/Contact";
 
-// In our main App component, we are rendering only single instances of Header and Navbar and several instances of Card
 function App() {
   return (
-    <div>
-      <Header />
-      <Navbar />
-      <Card />
-      <Card />
-      <Card />
-    </div>
+    <>
+      <Router>
+        <NavTabs />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Work" element={<Work />} />
+          <Route path="/Contact" element={<Contact />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
