@@ -3,8 +3,10 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <div className="align-items-end">
-        Here is will I put icons for LI, GH, and Email
+      <div className="d-flex justify-content-around">
+        <div>LinkedIn</div>
+        <div>Github</div>
+        <div>Link to Contact Page</div>
       </div>
     </>
   );
