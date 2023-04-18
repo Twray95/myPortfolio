@@ -5,7 +5,7 @@ function Work() {
     {
       id: 1,
       name: "Discover Denver",
-      desc: "A social media app to help users discover and review Denver attractions!",
+      desc: "A social media app to help users discover and review Denver attractions! Users can create profiles to add reviews and star rating to attractions",
       link: "https://github.com/miamauro/discovering-denver",
     },
     {
@@ -37,16 +37,25 @@ function Work() {
     <>
       <div className="d-flex flex-wrap vh-100">
         {projects.map((project) =>
-          project.id === 1 ? <div>Large Card</div> : <div>Small Card</div>
+          project.id === 1 ? (
+            <div className="card w-25">
+              <img src="..." className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h5 className="card-title">{project.name}</h5>
+                <p className="card-text">{project.desc}</p>
+                <a href={project.link} className="btn btn-primary">
+                  GitHub Link
+                </a>
+              </div>
+            </div>
+          ) : (
+            <div className="m-3 col w-25 h-25">
+              <header>{project.name}</header>
+              <section>{project.desc}</section>
+              <div>{project.link}</div>
+            </div>
+          )
         )}
-        <div className="m-3">
-          <header>Discover Denver</header>
-          <main>
-            A social media app to help user discover and review denver
-            attractions.{" "}
-          </main>
-          <footer>Link</footer>
-        </div>
       </div>
     </>
   );
