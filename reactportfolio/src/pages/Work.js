@@ -1,4 +1,9 @@
 import React from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
 
 function Work() {
   const projects = [
@@ -35,28 +40,37 @@ function Work() {
 
   return (
     <>
-      <div className="d-flex flex-wrap vh-100">
-        {projects.map((project) =>
-          project.id === 1 ? (
-            <div className="card w-25">
-              <img src="..." className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title">{project.name}</h5>
-                <p className="card-text">{project.desc}</p>
-                <a href={project.link} className="btn btn-primary">
-                  GitHub Link
-                </a>
-              </div>
-            </div>
-          ) : (
-            <div className="m-3 col w-25 h-25">
-              <header>{project.name}</header>
-              <section>{project.desc}</section>
-              <div>{project.link}</div>
-            </div>
-          )
-        )}
-      </div>
+      <Container>
+        <Row>
+          {projects.map((project) =>
+            project.id === 1 ? (
+              <Col md={4} sm={6}>
+                <Card className="text-center">
+                  <Card.Header as="h3">{project.name}</Card.Header>
+                  <Card.Body>
+                    <p className="card-text">{project.desc}</p>
+                    <a href={project.link} className="btn btn-primary">
+                      GitHub Link
+                    </a>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ) : (
+              <Col md={4} sm={6}>
+                <Card className="text-center">
+                  <Card.Header as="h3">{project.name}</Card.Header>
+                  <Card.Body>
+                    <p className="card-text">{project.desc}</p>
+                    <a href={project.link} className="btn btn-primary">
+                      GitHub Link
+                    </a>
+                  </Card.Body>
+                </Card>
+              </Col>
+            )
+          )}
+        </Row>
+      </Container>
     </>
   );
 }
