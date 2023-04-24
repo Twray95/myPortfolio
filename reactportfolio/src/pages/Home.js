@@ -3,7 +3,7 @@ import React from "react";
 function Home() {
   return (
     <>
-      <div className="row vh-100">
+      <div className="row">
         <div className="col-lg-8">
           <main>Hey, my name is Thomas Wray</main>
           <section>
