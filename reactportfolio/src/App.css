@@ -6,3 +6,23 @@ body {
   justify-content: end;
   background-color: purple;
 }
+
+.Navigation div a {
+  color: white;
+  font-weight: bold;
+}
+
+.Navigation div a:hover {
+  color: black;
+  background-color: white;
+}
+
+.card-body div a {
+  background-color: purple;
+  border-color: black;
+}
+
+.card-body a {
+  background-color: purple;
+  border-color: black;
+}
