@@ -5,8 +5,12 @@ import Nav from "react-bootstrap/Nav";
 function NavTabs() {
   return (
     <div className="navContainer">
-      <img src="./logo.png" className="logo" />
+      <div className="logo">
+        <img src="./logo.png" alt="logo " className="logoImage" />
+      </div>
+
       <Nav variant="tabs light" className="Navigation h-100 align-items-end">
+        <h1 className="text-light Name">Thomas Wray</h1>
         <Nav.Item>
           <LinkContainer to="/">
             <Nav.Link eventKey="/home">Home</Nav.Link>

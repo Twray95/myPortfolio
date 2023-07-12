@@ -87,6 +87,9 @@ function Contact() {
               value={formState.text}
             />
           </FloatingLabel>
+          <Form.Text className="text-danger">
+            {isFilled ? "" : "Please fill out the whole form before submitting"}
+          </Form.Text>
         </Form.Group>
         {isFilled ? (
           <Button variant="primary" type="submit" onClick={handleShow}>

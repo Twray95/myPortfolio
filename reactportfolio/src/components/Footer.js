@@ -1,5 +1,5 @@
 import React from "react";
-import { SocialIcon, socialIcon } from "react-social-icons";
+import { SocialIcon } from "react-social-icons";
 
 function Footer() {
   return (
@@ -9,6 +9,7 @@ function Footer() {
           url="https://www.linkedin.com/in/thomas-wray/"
           bgColor="#FFFFFF"
           style={{ height: 25, width: 25 }}
+          target="_blank"
         />
         <SocialIcon
           url="https://github.com/Twray95"
@@ -20,6 +21,7 @@ function Footer() {
           network="email"
           bgColor="#FFFFFF"
           style={{ height: 25, width: 25 }}
+          target="_blank"
         />
       </div>
     </>
