@@ -53,3 +53,18 @@ body {
   background-color: navy;
   border-color: black;
 }
+
+.meImg {
+  max-width: 50%;
+  max-height: 100%;
+  transform: rotate(90deg);
+  margin-top: 60px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.mainImgCon {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
